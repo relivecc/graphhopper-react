@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css","App.css"],"names":[],"mappings":"AAAA,MACE,WACF,CAEA,KACE,iBACF,CCNA,OACE,WACF","file":"main.2305ceae.chunk.css","sourcesContent":["#root {\n  height: 100%;\n}\n\nbody {\n  overflow-y: hidden;\n}\n","header {\n  z-index: 100;\n}\n"]}
