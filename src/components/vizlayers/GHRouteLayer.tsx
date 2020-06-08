@@ -82,7 +82,7 @@ const GHRouteLayer: React.FunctionComponent<{ sidebarElement: Element | undefine
             id: "deck-" + props.myKey,
             data: routes.map((r, i) => ({ path: r, alternate: i > 0 })),
             getPath: d => d.path as any,
-            getColor: d => [...hexStrToRGB(color), d.alternate ? 80 : 255],
+            getColor: d => [...hexStrToRGB(color), d.alternate ? 80 : 255] as [number, number, number, number],
             getWidth: d => 5,
             widthUnits: "pixels",
         });

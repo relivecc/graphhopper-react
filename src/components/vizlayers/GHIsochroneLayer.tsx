@@ -27,7 +27,7 @@ const IsochroneLayer: React.FunctionComponent<{ sidebarElement: Element | undefi
     const [isochroneData, setIsochroneData] = useState<any[]>([]);
 
     if (action === "set-start" && startPosition !== hoverPosition) {
-        setStartPosition(hoverPosition);
+        setStartPosition(hoverPosition!);
     }
 
     const routeParameters = useDebounce(useMemo(() => {
