@@ -16,6 +16,7 @@
         "@atlaskit/textfield": "^3.1.11",
         "@atlaskit/theme": "^9.5.3",
         "@emotion/core": "^10.0.9",
+        "@monaco-editor/react": "^3.3.1",
         "@relive/graphhopper-api-client": "0.0.4",
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.3.2",
@@ -27,6 +28,7 @@
         "axios": "0.19.2",
         "deck.gl": "^8.1.7",
         "lz-string": "^1.4.4",
+        "monaco-editor": "^0.20.0",
         "papaparse": "5.2.0",
         "react": "16.8.0",
         "react-dom": "16.8.0",
@@ -39,14 +41,18 @@
         "@danmarshall/deckgl-typings": "^4.1.8",
         "@types/react-map-gl": "^5.2.4",
         "@types/styled-components": "^5.1.0",
-        "@types/papaparse": "^5.0.3"
+        "@types/papaparse": "^5.0.3",
+        "ts-json-schema-generator": "0.70.1",
+        "ts-node": "8.10.2"
     },
     "scripts": {
         "preinstall": "rm -rf node_modules/@danmarshall",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "tsj": "cd @scripts && ts-node settingsFromEVs.ts && cd .. && ts-json-schema-generator --no-ref-encode --no-top-ref --tsconfig tsconfig.json --path ./@scripts/Settings.ts --out  src/components/vizlayers/dynamicvisualization/schema.json && rm -rf @scripts/Settings.ts",
+        "schema": "cd @scripts && ts-node settingsFromEVs.ts"
     },
     "eslintConfig": {
         "extends": "react-app"

@@ -23,6 +23,8 @@ import { SettingsPortal } from '../SettingsPortal';
 import { usePersistedState } from '../../util/usePersistentState';
 import ColorPicker from '@atlaskit/color-picker';
 import { DEFAULT_PALETTE, DEFAULT_PALETTE_ATLASKIT, hexStrToRGB } from '../../util/colors';
+import { monaco, ControlledEditor } from "@monaco-editor/react";
+import * as monacoEditor from 'monaco-editor/esm/vs/editor/editor.api';
 
 const routingAPI = new graphhopper.RoutingAPIApi(undefined, GRAPHHOPPER_BASE_URI);
 
@@ -37,6 +39,41 @@ const bikeNetwork =
         }
     }
 };
+
+var model: any;
+monaco
+    .init()
+    .then(monaco => {/* here is the instance of monaco, so you can use the `monaco.languages` or whatever you want */
+        monaco.languages.json.jsonDefaults.setDiagnosticsOptions({
+            schemas: [
+                ...monaco.languages.json.jsonDefaults.diagnosticsOptions.schemas!,
+                {
+                    uri: "internal://schema/route",
+                    fileMatch: ['foo'],
+                    schema: {
+                        type: "object",
+                        properties: {
+                            p1: {
+                                enum: ["v11", "v21"]
+                            }
+                        }
+                    }
+                }]
+        });
+        console.log("set diag route", monaco.languages.json.jsonDefaults.diagnosticsOptions);
+        model = monaco.editor.createModel("{route}", 'json', monaco.Uri.parse('internal://server/foo'));
+        // const x = monaco.editor.setModelLanguage;
+    })
+    .catch(error => console.error('An error occurred during initialization of Monaco: ', error));
+
+
+function handleEditorDidMount(_: any, editor: monacoEditor.editor.IStandaloneCodeEditor) {
+    // Now you can use the instance of monaco editor
+    // in this component whenever you want
+    // console.log(editor.getId(), "route");
+    // console.log(model);
+    editor.setModel(model);
+}
 
 const GHRouteLayer: React.FunctionComponent<{ sidebarElement: Element | undefined, setLayers: (myKey: string, layers: Array<Layer<any> | undefined | false>) => void, myKey: string }> = (props) => {
     const [alternateRoutes, setAlternateRoutes] = usePersistedState<boolean>(props.myKey + "-alt", false);
@@ -270,6 +307,13 @@ const GHRouteLayer: React.FunctionComponent<{ sidebarElement: Element | undefine
                     />
                     <label>Flex mode:</label>
                     <Textarea css={{ minHeight: "300px !important" }} ref={textAreaRef} defaultValue={json} onChange={(val) => setJson(val.target.value)}></Textarea>
+
+                    <ControlledEditor
+                        height={300}
+                        language="json"
+                        options={{ minimap: { enabled: false } }}
+                        editorDidMount={handleEditorDidMount}
+                    ></ControlledEditor>
 
                     <Button onClick={() => {
                         textAreaRef.current!.value = JSON.stringify(bikeNetwork, undefined, 2);

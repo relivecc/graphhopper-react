@@ -10,9 +10,40 @@ import MapContext from '../../context/MapContext';
 import { useDebounce } from '../../util/useDebounce';
 import { usePersistedState } from '../../util/usePersistentState';
 import { SettingsPortal } from '../SettingsPortal';
-import { DynamicVisualization, evaluateDynamicVisualization } from './DynamicVisualization';
+import { monaco, ControlledEditor } from "@monaco-editor/react";
+import * as monacoEditor from 'monaco-editor/esm/vs/editor/editor.api';
+import { DynamicVisualization } from './dynamicvisualization/model';
+import { evaluateDynamicVisualization } from './dynamicvisualization';
+import jsonSchema from "./dynamicvisualization/schema.json";
+var model: any;
+monaco
+    .init()
+    .then(monaco => {/* here is the instance of monaco, so you can use the `monaco.languages` or whatever you want */
+        monaco.languages.json.jsonDefaults.setDiagnosticsOptions({
+            schemas: [
+                ...monaco.languages.json.jsonDefaults.diagnosticsOptions.schemas!,
+                {
+                    uri: "internal://schema/mvt",
+                    fileMatch: ['mvt.json'],
+                    schema: jsonSchema
+                }]
+        });
+        console.log("set diag mvt", monaco.languages.json.jsonDefaults.diagnosticsOptions);
+        model = monaco.editor.createModel("{mvt}", 'json', monaco.Uri.parse('internal://server/mvt.json'));
+        // const x = monaco.editor.setModelLanguage;
 
-const defaultVis: DynamicVisualization<string, number> = {
+    })
+    .catch(error => console.error('An error occurred during initialization of Monaco: ', error));
+
+
+function handleEditorDidMount(_: any, editor: monacoEditor.editor.IStandaloneCodeEditor) {
+    // Now you can use the instance of monaco editor
+    // in this component whenever you want
+    // console.log(editor.getId(), "mvt");
+    // console.log(model);
+    editor.setModel(model);
+}
+const defaultVis: DynamicVisualization<string, string> = {
     lineWidth: {
         source: "road_class",
         categories: {
@@ -56,7 +87,9 @@ const GHMVTLayer: React.FunctionComponent<{ sidebarElement: Element | undefined,
                 if (!visualizationSettings.color) {
                     return [255, 0, 0, 255];
                 }
-                return evaluateDynamicVisualization(visualizationSettings.color, feature.properties)
+                const val = evaluateDynamicVisualization(visualizationSettings.color, feature.properties);
+                // console.log(val);
+                return val;
             },
             getFillColor: [140, 170, 180],
             highlightColor: [255, 0, 0, 255],
@@ -65,7 +98,7 @@ const GHMVTLayer: React.FunctionComponent<{ sidebarElement: Element | undefined,
             onHover: (info: any) => console.log(info?.object?.properties),
             getLineWidth: (feature: any) => {
                 if (!visualizationSettings.lineWidth) {
-                    return 1;
+                    return 10;
                 }
                 return evaluateDynamicVisualization(visualizationSettings.lineWidth, feature.properties)
             },
@@ -97,6 +130,12 @@ const GHMVTLayer: React.FunctionComponent<{ sidebarElement: Element | undefined,
                             console.log(e);
                         }
                     }}></Textarea>
+                    <ControlledEditor
+                        height={300}
+                        language="json"
+                        options={{ minimap: { enabled: false } }}
+                        editorDidMount={handleEditorDidMount}
+                    ></ControlledEditor>
                 </div>
             </SettingsPortal>}
         </React.Fragment >

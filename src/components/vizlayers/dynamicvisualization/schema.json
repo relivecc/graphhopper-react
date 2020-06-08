@@ -1,0 +1,4016 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "definitions": {
+    "CategoryMatch<(\"no\"|\"all\"|\"hgv\"),[number,number,number,number]>": {
+      "additionalProperties": false,
+      "properties": {
+        "match": {
+          "additionalProperties": false,
+          "properties": {
+            "eq": {
+              "enum": [
+                "no",
+                "all",
+                "hgv"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "eq"
+          ],
+          "type": "object"
+        },
+        "value": {
+          "items": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        }
+      },
+      "required": [
+        "match",
+        "value"
+      ],
+      "type": "object"
+    },
+    "CategoryMatch<(\"no\"|\"all\"|\"hgv\"),number>": {
+      "additionalProperties": false,
+      "properties": {
+        "match": {
+          "additionalProperties": false,
+          "properties": {
+            "eq": {
+              "enum": [
+                "no",
+                "all",
+                "hgv"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "eq"
+          ],
+          "type": "object"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "match",
+        "value"
+      ],
+      "type": "object"
+    },
+    "CategoryMatch<(\"other\"|\"grade1\"|\"grade2\"|\"grade3\"|\"grade4\"|\"grade5\"),[number,number,number,number]>": {
+      "additionalProperties": false,
+      "properties": {
+        "match": {
+          "additionalProperties": false,
+          "properties": {
+            "eq": {
+              "enum": [
+                "other",
+                "grade1",
+                "grade2",
+                "grade3",
+                "grade4",
+                "grade5"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "eq"
+          ],
+          "type": "object"
+        },
+        "value": {
+          "items": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        }
+      },
+      "required": [
+        "match",
+        "value"
+      ],
+      "type": "object"
+    },
+    "CategoryMatch<(\"other\"|\"grade1\"|\"grade2\"|\"grade3\"|\"grade4\"|\"grade5\"),number>": {
+      "additionalProperties": false,
+      "properties": {
+        "match": {
+          "additionalProperties": false,
+          "properties": {
+            "eq": {
+              "enum": [
+                "other",
+                "grade1",
+                "grade2",
+                "grade3",
+                "grade4",
+                "grade5"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "eq"
+          ],
+          "type": "object"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "match",
+        "value"
+      ],
+      "type": "object"
+    },
+    "CategoryMatch<(\"other\"|\"international\"|\"national\"|\"regional\"|\"local\"),[number,number,number,number]>": {
+      "additionalProperties": false,
+      "properties": {
+        "match": {
+          "additionalProperties": false,
+          "properties": {
+            "eq": {
+              "enum": [
+                "other",
+                "international",
+                "national",
+                "regional",
+                "local"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "eq"
+          ],
+          "type": "object"
+        },
+        "value": {
+          "items": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        }
+      },
+      "required": [
+        "match",
+        "value"
+      ],
+      "type": "object"
+    },
+    "CategoryMatch<(\"other\"|\"international\"|\"national\"|\"regional\"|\"local\"),number>": {
+      "additionalProperties": false,
+      "properties": {
+        "match": {
+          "additionalProperties": false,
+          "properties": {
+            "eq": {
+              "enum": [
+                "other",
+                "international",
+                "national",
+                "regional",
+                "local"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "eq"
+          ],
+          "type": "object"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "match",
+        "value"
+      ],
+      "type": "object"
+    },
+    "CategoryMatch<(\"other\"|\"motorway\"|\"trunk\"|\"primary\"|\"secondary\"|\"tertiary\"|\"residential\"|\"unclassified\"|\"service\"|\"road\"|\"track\"|\"bridleway\"|\"steps\"|\"cycleway\"|\"path\"|\"living_street\"|\"footway\"|\"pedestrian\"|\"platform\"|\"corridor\"),[number,number,number,number]>": {
+      "additionalProperties": false,
+      "properties": {
+        "match": {
+          "additionalProperties": false,
+          "properties": {
+            "eq": {
+              "enum": [
+                "other",
+                "motorway",
+                "trunk",
+                "primary",
+                "secondary",
+                "tertiary",
+                "residential",
+                "unclassified",
+                "service",
+                "road",
+                "track",
+                "bridleway",
+                "steps",
+                "cycleway",
+                "path",
+                "living_street",
+                "footway",
+                "pedestrian",
+                "platform",
+                "corridor"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "eq"
+          ],
+          "type": "object"
+        },
+        "value": {
+          "items": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        }
+      },
+      "required": [
+        "match",
+        "value"
+      ],
+      "type": "object"
+    },
+    "CategoryMatch<(\"other\"|\"motorway\"|\"trunk\"|\"primary\"|\"secondary\"|\"tertiary\"|\"residential\"|\"unclassified\"|\"service\"|\"road\"|\"track\"|\"bridleway\"|\"steps\"|\"cycleway\"|\"path\"|\"living_street\"|\"footway\"|\"pedestrian\"|\"platform\"|\"corridor\"),number>": {
+      "additionalProperties": false,
+      "properties": {
+        "match": {
+          "additionalProperties": false,
+          "properties": {
+            "eq": {
+              "enum": [
+                "other",
+                "motorway",
+                "trunk",
+                "primary",
+                "secondary",
+                "tertiary",
+                "residential",
+                "unclassified",
+                "service",
+                "road",
+                "track",
+                "bridleway",
+                "steps",
+                "cycleway",
+                "path",
+                "living_street",
+                "footway",
+                "pedestrian",
+                "platform",
+                "corridor"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "eq"
+          ],
+          "type": "object"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "match",
+        "value"
+      ],
+      "type": "object"
+    },
+    "CategoryMatch<(\"other\"|\"paved\"|\"asphalt\"|\"concrete\"|\"paving_stones\"|\"cobblestone\"|\"unpaved\"|\"compacted\"|\"fine_gravel\"|\"gravel\"|\"ground\"|\"dirt\"|\"grass\"|\"sand\"),[number,number,number,number]>": {
+      "additionalProperties": false,
+      "properties": {
+        "match": {
+          "additionalProperties": false,
+          "properties": {
+            "eq": {
+              "enum": [
+                "other",
+                "paved",
+                "asphalt",
+                "concrete",
+                "paving_stones",
+                "cobblestone",
+                "unpaved",
+                "compacted",
+                "fine_gravel",
+                "gravel",
+                "ground",
+                "dirt",
+                "grass",
+                "sand"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "eq"
+          ],
+          "type": "object"
+        },
+        "value": {
+          "items": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        }
+      },
+      "required": [
+        "match",
+        "value"
+      ],
+      "type": "object"
+    },
+    "CategoryMatch<(\"other\"|\"paved\"|\"asphalt\"|\"concrete\"|\"paving_stones\"|\"cobblestone\"|\"unpaved\"|\"compacted\"|\"fine_gravel\"|\"gravel\"|\"ground\"|\"dirt\"|\"grass\"|\"sand\"),number>": {
+      "additionalProperties": false,
+      "properties": {
+        "match": {
+          "additionalProperties": false,
+          "properties": {
+            "eq": {
+              "enum": [
+                "other",
+                "paved",
+                "asphalt",
+                "concrete",
+                "paving_stones",
+                "cobblestone",
+                "unpaved",
+                "compacted",
+                "fine_gravel",
+                "gravel",
+                "ground",
+                "dirt",
+                "grass",
+                "sand"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "eq"
+          ],
+          "type": "object"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "match",
+        "value"
+      ],
+      "type": "object"
+    },
+    "CategoryMatch<(\"other\"|\"road\"|\"ferry\"|\"tunnel\"|\"bridge\"|\"ford\"|\"shuttle_train\"),[number,number,number,number]>": {
+      "additionalProperties": false,
+      "properties": {
+        "match": {
+          "additionalProperties": false,
+          "properties": {
+            "eq": {
+              "enum": [
+                "other",
+                "road",
+                "ferry",
+                "tunnel",
+                "bridge",
+                "ford",
+                "shuttle_train"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "eq"
+          ],
+          "type": "object"
+        },
+        "value": {
+          "items": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        }
+      },
+      "required": [
+        "match",
+        "value"
+      ],
+      "type": "object"
+    },
+    "CategoryMatch<(\"other\"|\"road\"|\"ferry\"|\"tunnel\"|\"bridge\"|\"ford\"|\"shuttle_train\"),number>": {
+      "additionalProperties": false,
+      "properties": {
+        "match": {
+          "additionalProperties": false,
+          "properties": {
+            "eq": {
+              "enum": [
+                "other",
+                "road",
+                "ferry",
+                "tunnel",
+                "bridge",
+                "ford",
+                "shuttle_train"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "eq"
+          ],
+          "type": "object"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "match",
+        "value"
+      ],
+      "type": "object"
+    },
+    "CategoryMatch<(\"true\"|\"false\"),[number,number,number,number]>": {
+      "additionalProperties": false,
+      "properties": {
+        "match": {
+          "additionalProperties": false,
+          "properties": {
+            "eq": {
+              "enum": [
+                "true",
+                "false"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "eq"
+          ],
+          "type": "object"
+        },
+        "value": {
+          "items": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        }
+      },
+      "required": [
+        "match",
+        "value"
+      ],
+      "type": "object"
+    },
+    "CategoryMatch<(\"true\"|\"false\"),number>": {
+      "additionalProperties": false,
+      "properties": {
+        "match": {
+          "additionalProperties": false,
+          "properties": {
+            "eq": {
+              "enum": [
+                "true",
+                "false"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "eq"
+          ],
+          "type": "object"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "match",
+        "value"
+      ],
+      "type": "object"
+    },
+    "CategoryMatch<(\"yes\"|\"destination\"|\"customers\"|\"delivery\"|\"forestry\"|\"agricultural\"|\"private\"|\"other\"|\"no\"),[number,number,number,number]>": {
+      "additionalProperties": false,
+      "properties": {
+        "match": {
+          "additionalProperties": false,
+          "properties": {
+            "eq": {
+              "enum": [
+                "yes",
+                "destination",
+                "customers",
+                "delivery",
+                "forestry",
+                "agricultural",
+                "private",
+                "other",
+                "no"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "eq"
+          ],
+          "type": "object"
+        },
+        "value": {
+          "items": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        }
+      },
+      "required": [
+        "match",
+        "value"
+      ],
+      "type": "object"
+    },
+    "CategoryMatch<(\"yes\"|\"destination\"|\"customers\"|\"delivery\"|\"forestry\"|\"agricultural\"|\"private\"|\"other\"|\"no\"),number>": {
+      "additionalProperties": false,
+      "properties": {
+        "match": {
+          "additionalProperties": false,
+          "properties": {
+            "eq": {
+              "enum": [
+                "yes",
+                "destination",
+                "customers",
+                "delivery",
+                "forestry",
+                "agricultural",
+                "private",
+                "other",
+                "no"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "eq"
+          ],
+          "type": "object"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "match",
+        "value"
+      ],
+      "type": "object"
+    },
+    "CategoryMatch<number,[number,number,number,number]>": {
+      "additionalProperties": false,
+      "properties": {
+        "match": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "eq": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "eq"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "lt": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "lt"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "gt": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "gt"
+              ],
+              "type": "object"
+            }
+          ]
+        },
+        "value": {
+          "items": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        }
+      },
+      "required": [
+        "match",
+        "value"
+      ],
+      "type": "object"
+    },
+    "CategoryMatch<number,number>": {
+      "additionalProperties": false,
+      "properties": {
+        "match": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "eq": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "eq"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "lt": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "lt"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "gt": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "gt"
+              ],
+              "type": "object"
+            }
+          ]
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "match",
+        "value"
+      ],
+      "type": "object"
+    },
+    "DynamicVisualizationSetting<\"bike_network\",(\"other\"|\"international\"|\"national\"|\"regional\"|\"local\"),[number,number,number,number]>": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "international": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "local": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "national": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "other": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "regional": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                }
+              },
+              "required": [
+                "other",
+                "international",
+                "national",
+                "regional",
+                "local"
+              ],
+              "type": "object"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/CategoryMatch<(\"other\"|\"international\"|\"national\"|\"regional\"|\"local\"),[number,number,number,number]>"
+              },
+              "type": "array"
+            }
+          ]
+        },
+        "default": {
+          "items": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        },
+        "function": {
+          "enum": [
+            "category"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "bike_network"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "default",
+        "source"
+      ],
+      "type": "object"
+    },
+    "DynamicVisualizationSetting<\"bike_network\",(\"other\"|\"international\"|\"national\"|\"regional\"|\"local\"),number>": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "international": {
+                  "type": "number"
+                },
+                "local": {
+                  "type": "number"
+                },
+                "national": {
+                  "type": "number"
+                },
+                "other": {
+                  "type": "number"
+                },
+                "regional": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "other",
+                "international",
+                "national",
+                "regional",
+                "local"
+              ],
+              "type": "object"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/CategoryMatch<(\"other\"|\"international\"|\"national\"|\"regional\"|\"local\"),number>"
+              },
+              "type": "array"
+            }
+          ]
+        },
+        "default": {
+          "type": "number"
+        },
+        "function": {
+          "enum": [
+            "category"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "bike_network"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "default",
+        "source"
+      ],
+      "type": "object"
+    },
+    "DynamicVisualizationSetting<\"foot_network\",(\"other\"|\"international\"|\"national\"|\"regional\"|\"local\"),[number,number,number,number]>": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "international": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "local": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "national": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "other": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "regional": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                }
+              },
+              "required": [
+                "other",
+                "international",
+                "national",
+                "regional",
+                "local"
+              ],
+              "type": "object"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/CategoryMatch<(\"other\"|\"international\"|\"national\"|\"regional\"|\"local\"),[number,number,number,number]>"
+              },
+              "type": "array"
+            }
+          ]
+        },
+        "default": {
+          "items": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        },
+        "function": {
+          "enum": [
+            "category"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "foot_network"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "default",
+        "source"
+      ],
+      "type": "object"
+    },
+    "DynamicVisualizationSetting<\"foot_network\",(\"other\"|\"international\"|\"national\"|\"regional\"|\"local\"),number>": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "international": {
+                  "type": "number"
+                },
+                "local": {
+                  "type": "number"
+                },
+                "national": {
+                  "type": "number"
+                },
+                "other": {
+                  "type": "number"
+                },
+                "regional": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "other",
+                "international",
+                "national",
+                "regional",
+                "local"
+              ],
+              "type": "object"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/CategoryMatch<(\"other\"|\"international\"|\"national\"|\"regional\"|\"local\"),number>"
+              },
+              "type": "array"
+            }
+          ]
+        },
+        "default": {
+          "type": "number"
+        },
+        "function": {
+          "enum": [
+            "category"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "foot_network"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "default",
+        "source"
+      ],
+      "type": "object"
+    },
+    "DynamicVisualizationSetting<\"get_off_bike\",(\"true\"|\"false\"),[number,number,number,number]>": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "false": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "true": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                }
+              },
+              "required": [
+                "true",
+                "false"
+              ],
+              "type": "object"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/CategoryMatch<(\"true\"|\"false\"),[number,number,number,number]>"
+              },
+              "type": "array"
+            }
+          ]
+        },
+        "default": {
+          "items": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        },
+        "function": {
+          "enum": [
+            "category"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "get_off_bike"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "default",
+        "source"
+      ],
+      "type": "object"
+    },
+    "DynamicVisualizationSetting<\"get_off_bike\",(\"true\"|\"false\"),number>": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "false": {
+                  "type": "number"
+                },
+                "true": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "true",
+                "false"
+              ],
+              "type": "object"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/CategoryMatch<(\"true\"|\"false\"),number>"
+              },
+              "type": "array"
+            }
+          ]
+        },
+        "default": {
+          "type": "number"
+        },
+        "function": {
+          "enum": [
+            "category"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "get_off_bike"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "default",
+        "source"
+      ],
+      "type": "object"
+    },
+    "DynamicVisualizationSetting<\"max_speed\",number,[number,number,number,number]>": {
+      "anyOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "categories": {
+              "anyOf": [
+                {
+                  "items": {
+                    "items": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "number"
+                      }
+                    ],
+                    "maxItems": 4,
+                    "minItems": 4,
+                    "type": "array"
+                  },
+                  "type": "array"
+                },
+                {
+                  "items": {
+                    "$ref": "#/definitions/CategoryMatch<number,[number,number,number,number]>"
+                  },
+                  "type": "array"
+                }
+              ]
+            },
+            "default": {
+              "items": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "maxItems": 4,
+              "minItems": 4,
+              "type": "array"
+            },
+            "function": {
+              "enum": [
+                "category"
+              ],
+              "type": "string"
+            },
+            "source": {
+              "enum": [
+                "max_speed"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "categories",
+            "default",
+            "source"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "denominator": {
+              "type": "number"
+            },
+            "function": {
+              "enum": [
+                "linear"
+              ],
+              "type": "string"
+            },
+            "power": {
+              "type": "number"
+            },
+            "source": {
+              "enum": [
+                "max_speed"
+              ],
+              "type": "string"
+            },
+            "value": {
+              "items": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "maxItems": 4,
+              "minItems": 4,
+              "type": "array"
+            }
+          },
+          "required": [
+            "denominator",
+            "function",
+            "source",
+            "value"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "DynamicVisualizationSetting<\"max_speed\",number,number>": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/CategoryMatch<number,number>"
+              },
+              "type": "array"
+            }
+          ]
+        },
+        "default": {
+          "type": "number"
+        },
+        "function": {
+          "enum": [
+            "category"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "max_speed"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "default",
+        "source"
+      ],
+      "type": "object"
+    },
+    "DynamicVisualizationSetting<\"road_access\",(\"yes\"|\"destination\"|\"customers\"|\"delivery\"|\"forestry\"|\"agricultural\"|\"private\"|\"other\"|\"no\"),[number,number,number,number]>": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "agricultural": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "customers": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "delivery": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "destination": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "forestry": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "no": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "other": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "private": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "yes": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                }
+              },
+              "required": [
+                "yes",
+                "destination",
+                "customers",
+                "delivery",
+                "forestry",
+                "agricultural",
+                "private",
+                "other",
+                "no"
+              ],
+              "type": "object"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/CategoryMatch<(\"yes\"|\"destination\"|\"customers\"|\"delivery\"|\"forestry\"|\"agricultural\"|\"private\"|\"other\"|\"no\"),[number,number,number,number]>"
+              },
+              "type": "array"
+            }
+          ]
+        },
+        "default": {
+          "items": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        },
+        "function": {
+          "enum": [
+            "category"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "road_access"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "default",
+        "source"
+      ],
+      "type": "object"
+    },
+    "DynamicVisualizationSetting<\"road_access\",(\"yes\"|\"destination\"|\"customers\"|\"delivery\"|\"forestry\"|\"agricultural\"|\"private\"|\"other\"|\"no\"),number>": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "agricultural": {
+                  "type": "number"
+                },
+                "customers": {
+                  "type": "number"
+                },
+                "delivery": {
+                  "type": "number"
+                },
+                "destination": {
+                  "type": "number"
+                },
+                "forestry": {
+                  "type": "number"
+                },
+                "no": {
+                  "type": "number"
+                },
+                "other": {
+                  "type": "number"
+                },
+                "private": {
+                  "type": "number"
+                },
+                "yes": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "yes",
+                "destination",
+                "customers",
+                "delivery",
+                "forestry",
+                "agricultural",
+                "private",
+                "other",
+                "no"
+              ],
+              "type": "object"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/CategoryMatch<(\"yes\"|\"destination\"|\"customers\"|\"delivery\"|\"forestry\"|\"agricultural\"|\"private\"|\"other\"|\"no\"),number>"
+              },
+              "type": "array"
+            }
+          ]
+        },
+        "default": {
+          "type": "number"
+        },
+        "function": {
+          "enum": [
+            "category"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "road_access"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "default",
+        "source"
+      ],
+      "type": "object"
+    },
+    "DynamicVisualizationSetting<\"road_class\",(\"other\"|\"motorway\"|\"trunk\"|\"primary\"|\"secondary\"|\"tertiary\"|\"residential\"|\"unclassified\"|\"service\"|\"road\"|\"track\"|\"bridleway\"|\"steps\"|\"cycleway\"|\"path\"|\"living_street\"|\"footway\"|\"pedestrian\"|\"platform\"|\"corridor\"),[number,number,number,number]>": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "bridleway": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "corridor": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "cycleway": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "footway": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "living_street": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "motorway": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "other": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "path": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "pedestrian": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "platform": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "primary": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "residential": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "road": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "secondary": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "service": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "steps": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "tertiary": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "track": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "trunk": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "unclassified": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                }
+              },
+              "required": [
+                "other",
+                "motorway",
+                "trunk",
+                "primary",
+                "secondary",
+                "tertiary",
+                "residential",
+                "unclassified",
+                "service",
+                "road",
+                "track",
+                "bridleway",
+                "steps",
+                "cycleway",
+                "path",
+                "living_street",
+                "footway",
+                "pedestrian",
+                "platform",
+                "corridor"
+              ],
+              "type": "object"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/CategoryMatch<(\"other\"|\"motorway\"|\"trunk\"|\"primary\"|\"secondary\"|\"tertiary\"|\"residential\"|\"unclassified\"|\"service\"|\"road\"|\"track\"|\"bridleway\"|\"steps\"|\"cycleway\"|\"path\"|\"living_street\"|\"footway\"|\"pedestrian\"|\"platform\"|\"corridor\"),[number,number,number,number]>"
+              },
+              "type": "array"
+            }
+          ]
+        },
+        "default": {
+          "items": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        },
+        "function": {
+          "enum": [
+            "category"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "road_class"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "default",
+        "source"
+      ],
+      "type": "object"
+    },
+    "DynamicVisualizationSetting<\"road_class\",(\"other\"|\"motorway\"|\"trunk\"|\"primary\"|\"secondary\"|\"tertiary\"|\"residential\"|\"unclassified\"|\"service\"|\"road\"|\"track\"|\"bridleway\"|\"steps\"|\"cycleway\"|\"path\"|\"living_street\"|\"footway\"|\"pedestrian\"|\"platform\"|\"corridor\"),number>": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "bridleway": {
+                  "type": "number"
+                },
+                "corridor": {
+                  "type": "number"
+                },
+                "cycleway": {
+                  "type": "number"
+                },
+                "footway": {
+                  "type": "number"
+                },
+                "living_street": {
+                  "type": "number"
+                },
+                "motorway": {
+                  "type": "number"
+                },
+                "other": {
+                  "type": "number"
+                },
+                "path": {
+                  "type": "number"
+                },
+                "pedestrian": {
+                  "type": "number"
+                },
+                "platform": {
+                  "type": "number"
+                },
+                "primary": {
+                  "type": "number"
+                },
+                "residential": {
+                  "type": "number"
+                },
+                "road": {
+                  "type": "number"
+                },
+                "secondary": {
+                  "type": "number"
+                },
+                "service": {
+                  "type": "number"
+                },
+                "steps": {
+                  "type": "number"
+                },
+                "tertiary": {
+                  "type": "number"
+                },
+                "track": {
+                  "type": "number"
+                },
+                "trunk": {
+                  "type": "number"
+                },
+                "unclassified": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "other",
+                "motorway",
+                "trunk",
+                "primary",
+                "secondary",
+                "tertiary",
+                "residential",
+                "unclassified",
+                "service",
+                "road",
+                "track",
+                "bridleway",
+                "steps",
+                "cycleway",
+                "path",
+                "living_street",
+                "footway",
+                "pedestrian",
+                "platform",
+                "corridor"
+              ],
+              "type": "object"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/CategoryMatch<(\"other\"|\"motorway\"|\"trunk\"|\"primary\"|\"secondary\"|\"tertiary\"|\"residential\"|\"unclassified\"|\"service\"|\"road\"|\"track\"|\"bridleway\"|\"steps\"|\"cycleway\"|\"path\"|\"living_street\"|\"footway\"|\"pedestrian\"|\"platform\"|\"corridor\"),number>"
+              },
+              "type": "array"
+            }
+          ]
+        },
+        "default": {
+          "type": "number"
+        },
+        "function": {
+          "enum": [
+            "category"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "road_class"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "default",
+        "source"
+      ],
+      "type": "object"
+    },
+    "DynamicVisualizationSetting<\"road_class_link\",(\"true\"|\"false\"),[number,number,number,number]>": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "false": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "true": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                }
+              },
+              "required": [
+                "true",
+                "false"
+              ],
+              "type": "object"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/CategoryMatch<(\"true\"|\"false\"),[number,number,number,number]>"
+              },
+              "type": "array"
+            }
+          ]
+        },
+        "default": {
+          "items": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        },
+        "function": {
+          "enum": [
+            "category"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "road_class_link"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "default",
+        "source"
+      ],
+      "type": "object"
+    },
+    "DynamicVisualizationSetting<\"road_class_link\",(\"true\"|\"false\"),number>": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "false": {
+                  "type": "number"
+                },
+                "true": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "true",
+                "false"
+              ],
+              "type": "object"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/CategoryMatch<(\"true\"|\"false\"),number>"
+              },
+              "type": "array"
+            }
+          ]
+        },
+        "default": {
+          "type": "number"
+        },
+        "function": {
+          "enum": [
+            "category"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "road_class_link"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "default",
+        "source"
+      ],
+      "type": "object"
+    },
+    "DynamicVisualizationSetting<\"road_environment\",(\"other\"|\"road\"|\"ferry\"|\"tunnel\"|\"bridge\"|\"ford\"|\"shuttle_train\"),[number,number,number,number]>": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "bridge": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "ferry": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "ford": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "other": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "road": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "shuttle_train": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "tunnel": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                }
+              },
+              "required": [
+                "other",
+                "road",
+                "ferry",
+                "tunnel",
+                "bridge",
+                "ford",
+                "shuttle_train"
+              ],
+              "type": "object"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/CategoryMatch<(\"other\"|\"road\"|\"ferry\"|\"tunnel\"|\"bridge\"|\"ford\"|\"shuttle_train\"),[number,number,number,number]>"
+              },
+              "type": "array"
+            }
+          ]
+        },
+        "default": {
+          "items": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        },
+        "function": {
+          "enum": [
+            "category"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "road_environment"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "default",
+        "source"
+      ],
+      "type": "object"
+    },
+    "DynamicVisualizationSetting<\"road_environment\",(\"other\"|\"road\"|\"ferry\"|\"tunnel\"|\"bridge\"|\"ford\"|\"shuttle_train\"),number>": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "bridge": {
+                  "type": "number"
+                },
+                "ferry": {
+                  "type": "number"
+                },
+                "ford": {
+                  "type": "number"
+                },
+                "other": {
+                  "type": "number"
+                },
+                "road": {
+                  "type": "number"
+                },
+                "shuttle_train": {
+                  "type": "number"
+                },
+                "tunnel": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "other",
+                "road",
+                "ferry",
+                "tunnel",
+                "bridge",
+                "ford",
+                "shuttle_train"
+              ],
+              "type": "object"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/CategoryMatch<(\"other\"|\"road\"|\"ferry\"|\"tunnel\"|\"bridge\"|\"ford\"|\"shuttle_train\"),number>"
+              },
+              "type": "array"
+            }
+          ]
+        },
+        "default": {
+          "type": "number"
+        },
+        "function": {
+          "enum": [
+            "category"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "road_environment"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "default",
+        "source"
+      ],
+      "type": "object"
+    },
+    "DynamicVisualizationSetting<\"roundabout\",(\"true\"|\"false\"),[number,number,number,number]>": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "false": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "true": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                }
+              },
+              "required": [
+                "true",
+                "false"
+              ],
+              "type": "object"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/CategoryMatch<(\"true\"|\"false\"),[number,number,number,number]>"
+              },
+              "type": "array"
+            }
+          ]
+        },
+        "default": {
+          "items": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        },
+        "function": {
+          "enum": [
+            "category"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "roundabout"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "default",
+        "source"
+      ],
+      "type": "object"
+    },
+    "DynamicVisualizationSetting<\"roundabout\",(\"true\"|\"false\"),number>": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "false": {
+                  "type": "number"
+                },
+                "true": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "true",
+                "false"
+              ],
+              "type": "object"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/CategoryMatch<(\"true\"|\"false\"),number>"
+              },
+              "type": "array"
+            }
+          ]
+        },
+        "default": {
+          "type": "number"
+        },
+        "function": {
+          "enum": [
+            "category"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "roundabout"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "default",
+        "source"
+      ],
+      "type": "object"
+    },
+    "DynamicVisualizationSetting<\"surface\",(\"other\"|\"paved\"|\"asphalt\"|\"concrete\"|\"paving_stones\"|\"cobblestone\"|\"unpaved\"|\"compacted\"|\"fine_gravel\"|\"gravel\"|\"ground\"|\"dirt\"|\"grass\"|\"sand\"),[number,number,number,number]>": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "asphalt": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "cobblestone": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "compacted": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "concrete": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "dirt": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "fine_gravel": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "grass": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "gravel": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "ground": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "other": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "paved": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "paving_stones": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "sand": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "unpaved": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                }
+              },
+              "required": [
+                "other",
+                "paved",
+                "asphalt",
+                "concrete",
+                "paving_stones",
+                "cobblestone",
+                "unpaved",
+                "compacted",
+                "fine_gravel",
+                "gravel",
+                "ground",
+                "dirt",
+                "grass",
+                "sand"
+              ],
+              "type": "object"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/CategoryMatch<(\"other\"|\"paved\"|\"asphalt\"|\"concrete\"|\"paving_stones\"|\"cobblestone\"|\"unpaved\"|\"compacted\"|\"fine_gravel\"|\"gravel\"|\"ground\"|\"dirt\"|\"grass\"|\"sand\"),[number,number,number,number]>"
+              },
+              "type": "array"
+            }
+          ]
+        },
+        "default": {
+          "items": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        },
+        "function": {
+          "enum": [
+            "category"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "surface"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "default",
+        "source"
+      ],
+      "type": "object"
+    },
+    "DynamicVisualizationSetting<\"surface\",(\"other\"|\"paved\"|\"asphalt\"|\"concrete\"|\"paving_stones\"|\"cobblestone\"|\"unpaved\"|\"compacted\"|\"fine_gravel\"|\"gravel\"|\"ground\"|\"dirt\"|\"grass\"|\"sand\"),number>": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "asphalt": {
+                  "type": "number"
+                },
+                "cobblestone": {
+                  "type": "number"
+                },
+                "compacted": {
+                  "type": "number"
+                },
+                "concrete": {
+                  "type": "number"
+                },
+                "dirt": {
+                  "type": "number"
+                },
+                "fine_gravel": {
+                  "type": "number"
+                },
+                "grass": {
+                  "type": "number"
+                },
+                "gravel": {
+                  "type": "number"
+                },
+                "ground": {
+                  "type": "number"
+                },
+                "other": {
+                  "type": "number"
+                },
+                "paved": {
+                  "type": "number"
+                },
+                "paving_stones": {
+                  "type": "number"
+                },
+                "sand": {
+                  "type": "number"
+                },
+                "unpaved": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "other",
+                "paved",
+                "asphalt",
+                "concrete",
+                "paving_stones",
+                "cobblestone",
+                "unpaved",
+                "compacted",
+                "fine_gravel",
+                "gravel",
+                "ground",
+                "dirt",
+                "grass",
+                "sand"
+              ],
+              "type": "object"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/CategoryMatch<(\"other\"|\"paved\"|\"asphalt\"|\"concrete\"|\"paving_stones\"|\"cobblestone\"|\"unpaved\"|\"compacted\"|\"fine_gravel\"|\"gravel\"|\"ground\"|\"dirt\"|\"grass\"|\"sand\"),number>"
+              },
+              "type": "array"
+            }
+          ]
+        },
+        "default": {
+          "type": "number"
+        },
+        "function": {
+          "enum": [
+            "category"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "surface"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "default",
+        "source"
+      ],
+      "type": "object"
+    },
+    "DynamicVisualizationSetting<\"toll\",(\"no\"|\"all\"|\"hgv\"),[number,number,number,number]>": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "all": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "hgv": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "no": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                }
+              },
+              "required": [
+                "no",
+                "all",
+                "hgv"
+              ],
+              "type": "object"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/CategoryMatch<(\"no\"|\"all\"|\"hgv\"),[number,number,number,number]>"
+              },
+              "type": "array"
+            }
+          ]
+        },
+        "default": {
+          "items": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        },
+        "function": {
+          "enum": [
+            "category"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "toll"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "default",
+        "source"
+      ],
+      "type": "object"
+    },
+    "DynamicVisualizationSetting<\"toll\",(\"no\"|\"all\"|\"hgv\"),number>": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "all": {
+                  "type": "number"
+                },
+                "hgv": {
+                  "type": "number"
+                },
+                "no": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "no",
+                "all",
+                "hgv"
+              ],
+              "type": "object"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/CategoryMatch<(\"no\"|\"all\"|\"hgv\"),number>"
+              },
+              "type": "array"
+            }
+          ]
+        },
+        "default": {
+          "type": "number"
+        },
+        "function": {
+          "enum": [
+            "category"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "toll"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "default",
+        "source"
+      ],
+      "type": "object"
+    },
+    "DynamicVisualizationSetting<\"track_type\",(\"other\"|\"grade1\"|\"grade2\"|\"grade3\"|\"grade4\"|\"grade5\"),[number,number,number,number]>": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "grade1": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "grade2": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "grade3": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "grade4": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "grade5": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "other": {
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                }
+              },
+              "required": [
+                "other",
+                "grade1",
+                "grade2",
+                "grade3",
+                "grade4",
+                "grade5"
+              ],
+              "type": "object"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/CategoryMatch<(\"other\"|\"grade1\"|\"grade2\"|\"grade3\"|\"grade4\"|\"grade5\"),[number,number,number,number]>"
+              },
+              "type": "array"
+            }
+          ]
+        },
+        "default": {
+          "items": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        },
+        "function": {
+          "enum": [
+            "category"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "track_type"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "default",
+        "source"
+      ],
+      "type": "object"
+    },
+    "DynamicVisualizationSetting<\"track_type\",(\"other\"|\"grade1\"|\"grade2\"|\"grade3\"|\"grade4\"|\"grade5\"),number>": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "grade1": {
+                  "type": "number"
+                },
+                "grade2": {
+                  "type": "number"
+                },
+                "grade3": {
+                  "type": "number"
+                },
+                "grade4": {
+                  "type": "number"
+                },
+                "grade5": {
+                  "type": "number"
+                },
+                "other": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "other",
+                "grade1",
+                "grade2",
+                "grade3",
+                "grade4",
+                "grade5"
+              ],
+              "type": "object"
+            },
+            {
+              "items": {
+                "$ref": "#/definitions/CategoryMatch<(\"other\"|\"grade1\"|\"grade2\"|\"grade3\"|\"grade4\"|\"grade5\"),number>"
+              },
+              "type": "array"
+            }
+          ]
+        },
+        "default": {
+          "type": "number"
+        },
+        "function": {
+          "enum": [
+            "category"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "track_type"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "categories",
+        "default",
+        "source"
+      ],
+      "type": "object"
+    }
+  },
+  "properties": {
+    "color": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"road_class\",(\"other\"|\"motorway\"|\"trunk\"|\"primary\"|\"secondary\"|\"tertiary\"|\"residential\"|\"unclassified\"|\"service\"|\"road\"|\"track\"|\"bridleway\"|\"steps\"|\"cycleway\"|\"path\"|\"living_street\"|\"footway\"|\"pedestrian\"|\"platform\"|\"corridor\"),[number,number,number,number]>"
+        },
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"road_class_link\",(\"true\"|\"false\"),[number,number,number,number]>"
+        },
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"road_environment\",(\"other\"|\"road\"|\"ferry\"|\"tunnel\"|\"bridge\"|\"ford\"|\"shuttle_train\"),[number,number,number,number]>"
+        },
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"max_speed\",number,[number,number,number,number]>"
+        },
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"road_access\",(\"yes\"|\"destination\"|\"customers\"|\"delivery\"|\"forestry\"|\"agricultural\"|\"private\"|\"other\"|\"no\"),[number,number,number,number]>"
+        },
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"surface\",(\"other\"|\"paved\"|\"asphalt\"|\"concrete\"|\"paving_stones\"|\"cobblestone\"|\"unpaved\"|\"compacted\"|\"fine_gravel\"|\"gravel\"|\"ground\"|\"dirt\"|\"grass\"|\"sand\"),[number,number,number,number]>"
+        },
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"toll\",(\"no\"|\"all\"|\"hgv\"),[number,number,number,number]>"
+        },
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"track_type\",(\"other\"|\"grade1\"|\"grade2\"|\"grade3\"|\"grade4\"|\"grade5\"),[number,number,number,number]>"
+        },
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"roundabout\",(\"true\"|\"false\"),[number,number,number,number]>"
+        },
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"bike_network\",(\"other\"|\"international\"|\"national\"|\"regional\"|\"local\"),[number,number,number,number]>"
+        },
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"get_off_bike\",(\"true\"|\"false\"),[number,number,number,number]>"
+        },
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"foot_network\",(\"other\"|\"international\"|\"national\"|\"regional\"|\"local\"),[number,number,number,number]>"
+        }
+      ]
+    },
+    "lineWidth": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"road_class\",(\"other\"|\"motorway\"|\"trunk\"|\"primary\"|\"secondary\"|\"tertiary\"|\"residential\"|\"unclassified\"|\"service\"|\"road\"|\"track\"|\"bridleway\"|\"steps\"|\"cycleway\"|\"path\"|\"living_street\"|\"footway\"|\"pedestrian\"|\"platform\"|\"corridor\"),number>"
+        },
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"road_class_link\",(\"true\"|\"false\"),number>"
+        },
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"road_environment\",(\"other\"|\"road\"|\"ferry\"|\"tunnel\"|\"bridge\"|\"ford\"|\"shuttle_train\"),number>"
+        },
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"max_speed\",number,number>"
+        },
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"road_access\",(\"yes\"|\"destination\"|\"customers\"|\"delivery\"|\"forestry\"|\"agricultural\"|\"private\"|\"other\"|\"no\"),number>"
+        },
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"surface\",(\"other\"|\"paved\"|\"asphalt\"|\"concrete\"|\"paving_stones\"|\"cobblestone\"|\"unpaved\"|\"compacted\"|\"fine_gravel\"|\"gravel\"|\"ground\"|\"dirt\"|\"grass\"|\"sand\"),number>"
+        },
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"toll\",(\"no\"|\"all\"|\"hgv\"),number>"
+        },
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"track_type\",(\"other\"|\"grade1\"|\"grade2\"|\"grade3\"|\"grade4\"|\"grade5\"),number>"
+        },
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"roundabout\",(\"true\"|\"false\"),number>"
+        },
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"bike_network\",(\"other\"|\"international\"|\"national\"|\"regional\"|\"local\"),number>"
+        },
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"get_off_bike\",(\"true\"|\"false\"),number>"
+        },
+        {
+          "$ref": "#/definitions/DynamicVisualizationSetting<\"foot_network\",(\"other\"|\"international\"|\"national\"|\"regional\"|\"local\"),number>"
+        }
+      ]
+    }
+  },
+  "type": "object"
+}
