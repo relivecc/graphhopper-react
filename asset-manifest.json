@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/graphhopper-react/static/css/main.2305ceae.chunk.css",
+    "main.js": "/graphhopper-react/static/js/main.4b6f7447.chunk.js",
+    "main.js.map": "/graphhopper-react/static/js/main.4b6f7447.chunk.js.map",
+    "runtime-main.js": "/graphhopper-react/static/js/runtime-main.395663ff.js",
+    "runtime-main.js.map": "/graphhopper-react/static/js/runtime-main.395663ff.js.map",
+    "static/css/2.2bd37e2f.chunk.css": "/graphhopper-react/static/css/2.2bd37e2f.chunk.css",
+    "static/js/2.b957c6a2.chunk.js": "/graphhopper-react/static/js/2.b957c6a2.chunk.js",
+    "static/js/2.b957c6a2.chunk.js.map": "/graphhopper-react/static/js/2.b957c6a2.chunk.js.map",
+    "index.html": "/graphhopper-react/index.html",
+    "precache-manifest.fb2479bf2b3f547c8069c29c800f0119.js": "/graphhopper-react/precache-manifest.fb2479bf2b3f547c8069c29c800f0119.js",
+    "service-worker.js": "/graphhopper-react/service-worker.js",
+    "static/css/2.2bd37e2f.chunk.css.map": "/graphhopper-react/static/css/2.2bd37e2f.chunk.css.map",
+    "static/css/main.2305ceae.chunk.css.map": "/graphhopper-react/static/css/main.2305ceae.chunk.css.map",
+    "static/js/2.b957c6a2.chunk.js.LICENSE.txt": "/graphhopper-react/static/js/2.b957c6a2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.395663ff.js",
+    "static/css/2.2bd37e2f.chunk.css",
+    "static/js/2.b957c6a2.chunk.js",
+    "static/css/main.2305ceae.chunk.css",
+    "static/js/main.4b6f7447.chunk.js"
+  ]
+}
