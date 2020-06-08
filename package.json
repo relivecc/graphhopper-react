@@ -1,39 +1,68 @@
 {
-  "name": "graphhopper-react-client",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
-    "typescript": "~3.7.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "@relive/graphhopper-react",
+    "version": "0.1.0",
+    "private": true,
+    "prettier": "./prettier.js",
+    "dependencies": {
+        "@atlaskit/atlassian-navigation": "^0.10.8",
+        "@atlaskit/button": "13.3.12",
+        "@atlaskit/checkbox": "10.1.12",
+        "@atlaskit/color-picker": "^0.5.21",
+        "@atlaskit/css-reset": "^5.0.10",
+        "@atlaskit/menu": "0.4.2",
+        "@atlaskit/page-layout": "^0.3.3",
+        "@atlaskit/tabs": "11.2.9",
+        "@atlaskit/textarea": "^2.2.9",
+        "@atlaskit/textfield": "^3.1.11",
+        "@atlaskit/theme": "^9.5.3",
+        "@emotion/core": "^10.0.9",
+        "@relive/graphhopper-api-client": "^0.0.1",
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.3.2",
+        "@testing-library/user-event": "^7.1.2",
+        "@types/jest": "^24.0.0",
+        "@types/node": "^12.0.0",
+        "@types/react": "^16.9.0",
+        "@types/react-dom": "^16.9.0",
+        "axios": "0.19.2",
+        "deck.gl": "^8.1.7",
+        "lz-string": "^1.4.4",
+        "papaparse": "5.2.0",
+        "react": "16.8.0",
+        "react-dom": "16.8.0",
+        "react-map-gl": "^5.2.5",
+        "react-scripts": "3.4.1",
+        "styled-components": "^5.1.1",
+        "typescript": "~3.7.2"
+    },
+    "devDependencies": {
+        "@danmarshall/deckgl-typings": "^4.1.8",
+        "@types/react-map-gl": "^5.2.4",
+        "@types/styled-components": "^5.1.0",
+        "@types/papaparse": "^5.0.3"
+    },
+    "scripts": {
+        "preinstall": "rm -rf node_modules/@danmarshall",
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "homepage": "/maps",
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "proxy": "http://localhost:8989"
 }
