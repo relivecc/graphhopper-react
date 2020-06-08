@@ -21,6 +21,12 @@ The project builds upon deck.gl, and uses the concept of _Visualization Layers_.
 -   [Isochrone Visualization](docs/isochrone.md)
 -   [MVT Visualization](docs/mvt.md)
 
+## Tile Layers
+
+Add a `.env` file with API tokens for different tile layers, e.g.:
+
+    REACT_APP_MAPBOX_TOKEN=<your mapbox token>
+
 ## Learn More
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
