@@ -101,7 +101,8 @@ const IsochroneLayer: React.FunctionComponent<{ sidebarElement: Element | undefi
                     vehicle: VehicleProfileId.Bike,
                     elevation,
                     distance_limit: distanceLimit,
-                    columns: ["longitude", "latitude", "time", "distance", "prev_longitude", "prev_latitude"].join(",")
+                    columns: ["longitude", "latitude", "time", "distance", "prev_longitude", "prev_latitude"].join(","),
+                    key: process.env.REACT_APP_GRAPHHOPPER_API_KEY
                 }, GRAPHHOPPER_BASE_URI);
                 setIsochroneData(result.data);
             } catch (e) {

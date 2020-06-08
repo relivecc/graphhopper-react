@@ -47,9 +47,10 @@ const GHMVTLayer: React.FunctionComponent<{ sidebarElement: Element | undefined,
     useEffect(() => {
         console.log("change layer");
         const details = Object.keys(context.graphHopperInfo?.encoded_values || {}).map(key => "details=" + encodeURIComponent(key)).join("&");
+        const key = process.env.REACT_APP_GRAPHHOPPER_API_KEY ? "&key=" + encodeURIComponent(process.env.REACT_APP_GRAPHHOPPER_API_KEY) : "";
         const layer = new MVTLayer<any>({
             id: "deck-" + props.myKey,
-            data: GRAPHHOPPER_BASE_URI + `/mvt/{z}/{x}/{y}.mvt?${details}`,
+            data: GRAPHHOPPER_BASE_URI + `/mvt/{z}/{x}/{y}.mvt?${details}${key}`,
             minZoom: 0,
             maxZoom: 23,
             getLineColor: (feature: any) => { // [192, 192, 192],

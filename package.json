@@ -16,7 +16,7 @@
         "@atlaskit/textfield": "^3.1.11",
         "@atlaskit/theme": "^9.5.3",
         "@emotion/core": "^10.0.9",
-        "@relive/graphhopper-api-client": "0.0.4",
+        "@relive/graphhopper-api-client": "^0.0.5",
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.3.2",
         "@testing-library/user-event": "^7.1.2",
@@ -37,21 +37,24 @@
     },
     "devDependencies": {
         "@danmarshall/deckgl-typings": "^4.1.8",
+        "@types/papaparse": "^5.0.3",
         "@types/react-map-gl": "^5.2.4",
         "@types/styled-components": "^5.1.0",
-        "@types/papaparse": "^5.0.3"
+        "gh-pages": "^3.0.0"
     },
     "scripts": {
         "preinstall": "rm -rf node_modules/@danmarshall",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": "react-app"
     },
-    "homepage": "/maps",
+    "homepage": "https://relivecc.github.io/graphhopper-react",
     "browserslist": {
         "production": [
             ">0.2%",

@@ -73,7 +73,7 @@ function App() {
   useEffect(() => {
     (async () => {
       try {
-        const info = await getInfo(GRAPHHOPPER_BASE_URI);
+        const info = await getInfo({ key: process.env.REACT_APP_GRAPHHOPPER_API_KEY }, GRAPHHOPPER_BASE_URI);
         context.graphHopperInfo = info.data;
         console.log(info.data.encoded_values);
       } catch (e) {

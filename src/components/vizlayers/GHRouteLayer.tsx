@@ -24,7 +24,7 @@ import { usePersistedState } from '../../util/usePersistentState';
 import ColorPicker from '@atlaskit/color-picker';
 import { DEFAULT_PALETTE, DEFAULT_PALETTE_ATLASKIT, hexStrToRGB } from '../../util/colors';
 
-const routingAPI = new graphhopper.RoutingAPIApi(undefined, GRAPHHOPPER_BASE_URI);
+const routingAPI = new graphhopper.RoutingAPIApi({ apiKey: process.env.REACT_APP_GRAPHHOPPER_API_KEY }, GRAPHHOPPER_BASE_URI);
 
 type Action = "set-start" | "set-end";
 
@@ -166,7 +166,8 @@ const GHRouteLayer: React.FunctionComponent<{ sidebarElement: Element | undefine
                         vehicle: undefined,
                         points: [[...startPosition].reverse(), [...endPosition].reverse()],
                         point: undefined,
-                        profile: "bike"
+                        profile: "bike",
+                        key: process.env.REACT_APP_GRAPHHOPPER_API_KEY
                     }, GRAPHHOPPER_BASE_URI)
                     : await routingAPI.getRoute(params);
 
