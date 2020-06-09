@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/graphhopper-react/precache-manifest.a18b40bc7323b9ca4feaff3a9dc3c818.js"
+  "/graphhopper-react/precache-manifest.d9267a98f6e4b8e504b54f9cb7bec807.js"
 );
 
 self.addEventListener('message', (event) => {
