@@ -142,6 +142,27 @@ const GHRouteLayer: React.FunctionComponent<{ sidebarElement: Element | undefine
         dispatchAction(undefined);
     }, []);
 
+    const downloadGPX = useCallback(async () => {
+
+        if (json.trim().length) {
+            throw new Error("not yet supported for flex mode");
+        }
+
+        const elevation = false;
+
+        const params: RoutingAPIApiGetRouteRequest = {
+            point: [startPosition, endPosition].map(c => c.join()),
+            vehicle: VehicleProfileId.Bike,
+            elevation,
+            algorithm: alternateRoutes ? "alternative_route" : undefined
+        } as any;
+        debugger;
+        const gpx = await routingAPI.getRoute(params, { query: { type: "gpx" } });
+
+        let blob = new Blob([gpx.data as string], { type: `application/gpx+xml` });
+        window.location.href = URL.createObjectURL(blob);
+    }, [routes]);
+
     useEffect(() => {
         if (!startPosition || !endPosition) {
             return;
@@ -278,9 +299,9 @@ const GHRouteLayer: React.FunctionComponent<{ sidebarElement: Element | undefine
                     }}>
                         Bike network template
                     </Button>
-                    {/* <Button onClick={downloadGPX}>
-                        Download GPX
-                    </Button> */}
+                    <Button onClick={downloadGPX}>
+                        Download GPXs
+                    </Button>
                     <div>
                         Color:
                     <CP
